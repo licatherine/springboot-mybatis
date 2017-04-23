@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+<h1>Freemarker Mybatis Display</h1>
+<p>Length of cis_dict：${listDemo?size}</p>
+
+<table border=1>
+    <tr>
+        <td>property_name</td>
+        <td>property_id</td>
+        <td>property_value</td>
+        <td>category_id</td>
+    </tr>
+    <#list listDemo as demo>
+        <tr>
+            <td>${demo.property_name}
+            <td>${demo.property_id}
+            <td>${demo.property_value}
+            <td>${demo.category_id}
+    </#list>
+</table>
+
+</body>
+</html>
