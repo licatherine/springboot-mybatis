@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "mybatis-3-config.dtd">
 
-</beans>
+<configuration>
+    <!-- - - - - - - 分页插件，此文件不用修改- - - - - - - - - -->
+    <properties>
+        <property name="dialect" value="mysql" />
+    </properties>
+    <!--<plugins>
+        &lt;!&ndash;<plugin interceptor="com.albus.mybatis.extend.PaginationInterceptor" />&ndash;&gt;
+    </plugins>-->
+    <settings>
+        <setting name="logImpl" value="LOG4J" />
+    </settings>
+    <mappers>
+    </mappers>
+</configuration>
