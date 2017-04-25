@@ -9,9 +9,15 @@
     <!--<plugins>
         &lt;!&ndash;<plugin interceptor="com.albus.mybatis.extend.PaginationInterceptor" />&ndash;&gt;
     </plugins>-->
-    <settings>
+    <!--<settings>
         <setting name="logImpl" value="LOG4J" />
-    </settings>
+    </settings>-->
+    <typeAliases>
+        <typeAlias type="com.rebecca.bean.Demo" alias="Demo" />
+        <typeAlias type="com.rebecca.bean.Person" alias="Person"/>
+    </typeAliases>
     <mappers>
+        <package name="com.rebecca.mapper"/>
     </mappers>
+
 </configuration>

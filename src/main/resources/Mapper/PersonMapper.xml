@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <!-- 所有列 -->
+        <!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.rebecca.mapper.PersonMapper">
+
+<!--<select id="findAllBooks" resultType="Book">
+    SELECT * FROM books
+</select>-->
+
+    <select id="selectPersons" resultType="Person">
+        select * from tmp_person
+    </select>
+    <insert id="insertPerson" parameterType="Person">
+      insert into tmp_person(id,name,age,sex) values(#{id},#{name},#{age},#{sex})
+    </insert>
+
+    <update id="updatePerson" parameterType="Person">
+        update tmp_person set name=#{name},address=#{address} where id=#{id}
+    </update>
+
+    <delete id="deletePerson" parameterType="int">
+        delete from tmp_person where id=#{id}
+    </delete>
+
+</mapper>
