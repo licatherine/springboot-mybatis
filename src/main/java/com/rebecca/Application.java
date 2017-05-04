@@ -2,10 +2,8 @@ package com.rebecca;
 
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * Created by catherine on 2017/4/14.
@@ -14,8 +12,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @EnableAutoConfiguration
 @ComponentScan*/
 @SpringBootApplication
-@MapperScan(basePackages = "com.rebecca")
-@ConfigurationProperties(prefix="spring.datasource")
+/*@MapperScan(basePackages = "com.rebecca")*/
+/*@ConfigurationProperties(prefix="spring.datasource")*/
 public class Application {
 
     public static Log logger = LogFactory.getLog(Application.class);
